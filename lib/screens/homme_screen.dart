@@ -1,5 +1,7 @@
 import 'package:facebook_clone/config/palette.dart';
+import 'package:facebook_clone/data/data.dart';
 import 'package:facebook_clone/widgets/circle_button.dart';
+import 'package:facebook_clone/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -29,9 +31,12 @@ class HomeScreen extends StatelessWidget {
             actions: [
               CircleButton(null, Icons.search, 25.0, () => {print('Search')}),
               CircleButton(null, MdiIcons.facebookMessenger, 25.0,
-                  () => {print('Messenger')})
+                  () => {print('Messenger')}),
             ],
-          )
+          ),
+          SliverToBoxAdapter(
+            child: CreatePostContainer(null, currentUser),
+          ),
         ],
       ),
     );
