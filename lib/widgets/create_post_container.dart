@@ -17,7 +17,10 @@ class CreatePostContainer extends StatelessWidget {
         children: [
           Row(
             children: [
-              ProfileAvatar(null, currentUser.imageUrl, false, false),
+              ProfileAvatar(
+                  imageUrl: currentUser.imageUrl,
+                  isActive: false,
+                  hasBorder: false),
               const SizedBox(
                 width: 8.0,
               ),

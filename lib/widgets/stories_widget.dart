@@ -91,7 +91,9 @@ class _StoryCard extends StatelessWidget {
                   ),
                 )
               : ProfileAvatar(
-                  null, story!.user!.imageUrl, false, !story!.isViewed),
+                  imageUrl: story!.user!.imageUrl,
+                  isActive: false,
+                  hasBorder: !story!.isViewed),
         ),
         Positioned(
             bottom: 8.0,
