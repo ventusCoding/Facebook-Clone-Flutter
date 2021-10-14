@@ -1,6 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:facebook_clone/data/data.dart';
 import 'package:facebook_clone/models/user_model.dart';
+import 'package:facebook_clone/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class CreatePostContainer extends StatelessWidget {
@@ -17,19 +17,14 @@ class CreatePostContainer extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: 20.0,
-                backgroundColor: Colors.grey[200],
-                backgroundImage:
-                    CachedNetworkImageProvider(currentUser.imageUrl),
-              ),
+              ProfileAvatar(null, currentUser.imageUrl, false),
               const SizedBox(
                 width: 8.0,
               ),
               Expanded(
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'What\'s on your mind?',
+                    hintText: 'What\'s on your mind? ${currentUser.name}',
                   ),
                 ),
               ),
