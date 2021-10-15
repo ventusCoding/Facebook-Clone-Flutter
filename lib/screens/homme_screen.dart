@@ -19,9 +19,9 @@ class HomeScreen extends StatelessWidget {
           SliverAppBar(
             brightness: Brightness.light,
             backgroundColor: Colors.white,
-            title: Text(
+            title: const Text(
               'facebook',
-              style: const TextStyle(
+              style: TextStyle(
                 color: Palette.facebookBlue,
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,
