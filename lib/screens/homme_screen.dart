@@ -16,26 +16,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            brightness: Brightness.light,
-            backgroundColor: Colors.white,
-            title: const Text(
-              'facebook',
-              style: TextStyle(
-                color: Palette.facebookBlue,
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: -1.2,
-              ),
-            ),
-            centerTitle: false,
-            floating: true,
-            actions: [
-              CircleButton(null, Icons.search, 25.0, () => {print('Search')}),
-              CircleButton(null, MdiIcons.facebookMessenger, 25.0,
-                  () => {print('Messenger')}),
-            ],
-          ),
           SliverToBoxAdapter(
             child: CreatePostContainer(null, currentUser),
           ),
